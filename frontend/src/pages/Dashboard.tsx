@@ -530,9 +530,9 @@ const Dashboard: React.FC = () => {
         }}
       >
         <Typography variant="subtitle2" sx={{ fontWeight: 600, color: '#111', mb: 1 }}>
-          ONT Offline
+          ONT OFFLINE
         </Typography>
-              <Typography variant="h4" sx={{ fontWeight: 750, color: '#ff4500', lineHeight: 1.2, fontSize: 26}}>
+              <Typography variant="h4" sx={{ fontWeight: 750, color: '#5002cf', lineHeight: 1.2, fontSize: 26}}>
           {totalONTOffline} <span style={{ fontSize: 'inherit', fontWeight: 'inherit'}}>ONT</span>
         </Typography>
         <Typography variant="body2" sx={{ color: '#888'}}>
@@ -590,9 +590,9 @@ const Dashboard: React.FC = () => {
         }}
       >
         <Typography variant="subtitle2" sx={{ fontWeight: 550, color: '#111', mb: 1 }}>
-          ONT Redaman Tinggi
+          ONT REDAMAN TINGGI
         </Typography>
-        <Typography variant="h4" sx={{ fontWeight: 750, color: '#ffa726', lineHeight: 1.2, fontSize: 26 }}>
+        <Typography variant="h4" sx={{ fontWeight: 750, color: '#dbd509', lineHeight: 1.2, fontSize: 26 }}>
           {totalRedamanTinggi} <span style={{ fontSize: 'inherit', fontWeight: 'inherit'}}>ONT</span>
         </Typography>
         <Typography variant="body2" sx={{ color: '#888'}}>
@@ -678,12 +678,12 @@ const Dashboard: React.FC = () => {
                       fontWeight: 'normal'
                     }}
                   >
-                    ({ontList.length} // 
-                    <span style={{ color: '#ff4500' }}> {offlineONTInOLT} </span>
-                    <span style={{ color: '#111'}}>//</span>
-                    <span style={{ color: '#ff0033' }}> {losONTInOLT} </span>
-                    <span style={{ color: '#111'}}>//</span>
-                    <span style={{ color: '#ffa726' }}> {redamanTinggiInOLT}</span>) 
+                    &nbsp;&nbsp;&nbsp; Total ONT:  {ontList.length}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span style={{ color: '#5002cf' }}> ONT Offline : {offlineONTInOLT} </span>
+                    <span style={{ color: '#111'}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span style={{ color: '#ff0033' }}> ONT Los: {losONTInOLT} </span>
+                    <span style={{ color: '#111'}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span style={{ color: '#dbd509' }}> ONT Redaman Tinggi : {redamanTinggiInOLT}</span>
                 </Typography>
               </Typography>
               
