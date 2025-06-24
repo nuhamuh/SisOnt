@@ -92,7 +92,7 @@ const Login: React.FC = () => {
               fullWidth
               id="username"
               name="username"
-              placeholder="Enter username"
+              placeholder="Username"
               autoComplete="username"
               autoFocus
               value={username}
@@ -134,7 +134,7 @@ const Login: React.FC = () => {
               name="password"
               type="password"
               id="password"
-              placeholder="Enter password"
+              placeholder="Password"
               autoComplete="current-password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
