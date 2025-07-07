@@ -5,13 +5,4 @@ export interface ApiResponse<T> {
   status: string;
 }
 
-export interface User {
-  id: number;
-  username: string;
-  email: string;
-}
-
-export interface APIError {
-  message: string;
-  status: number;
-} 
+ 

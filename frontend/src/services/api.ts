@@ -21,15 +21,7 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
-export const testConnection = async () => {
-  const response = await api.get<ApiResponse<string>>('/test');
-  return response.data;
-};
 
-export const fetchData = async () => {
-  const response = await api.get<ApiResponse<any>>('/data');
-  return response.data;
-};
 
 export const fetchONTList = async () => {
   const response = await api.get<ApiResponse<any>>('/api/ont');
@@ -53,25 +45,6 @@ export const addONT = async (data: any) => {
 
 export const deleteONT = async (serialNumber: string) => {
   const response = await api.delete<ApiResponse<string>>(`/api/ont/${serialNumber}`);
-  return response.data;
-};
-
-export const fetchUsers = async () => {
-  const response = await api.get<ApiResponse<any>>('/users');
-  return response.data;
-};
-
-export const addUser = async (data: { username: string; password: string; role: string }) => {
-  const hashedPassword = md5(data.password);
-  const response = await api.post<ApiResponse<any>>('/users', {
-    ...data,
-    password: hashedPassword
-  });
-  return response.data;
-};
-
-export const deleteUser = async (userId: number) => {
-  const response = await api.delete<ApiResponse<string>>(`/users/${userId}`);
   return response.data;
 };
 

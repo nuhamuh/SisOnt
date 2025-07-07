@@ -87,14 +87,6 @@ def get_filter_data():
         cur.close()
         conn.close()
 
-@ont_bp.route('/ont/<sn_ont>/refresh', methods=['POST'])
-def refresh_ont(sn_ont):
-    # Implement refresh logic here
-    return jsonify({
-        'status': 'success',
-        'message': f'Data ONT {sn_ont} berhasil diperbarui'
-    })
-
 @ont_bp.route('/ont', methods=['POST'])
 def add_ont():
     data = request.json

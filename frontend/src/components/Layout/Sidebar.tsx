@@ -15,12 +15,9 @@ import {
 } from '@mui/material';
 import { 
   Dashboard as DashboardIcon,
-  People as PeopleIcon,
   Storage as StorageIcon,
   History as HistoryIcon,
-  BarChart as BarChartIcon,
-  Logout as LogoutIcon,
-  AdminPanelSettings as AdminIcon
+  Logout as LogoutIcon
 } from '@mui/icons-material';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
@@ -32,7 +29,6 @@ const menuItems = [
   { text: 'Dashboard', icon: <DashboardIcon />, path: '/dashboard' },
   { text: 'Data ONT', icon: <StorageIcon />, path: '/data-ont' },
   { text: 'Histori Pemantauan', icon: <HistoryIcon />, path: '/histori-pemantauan' },
-  // { text: 'Grafik', icon: <BarChartIcon />, path: '/grafik' },
 ];
 
 const Sidebar: React.FC = () => {
@@ -55,9 +51,7 @@ const Sidebar: React.FC = () => {
     handleClose();
   };
 
-  const handleAdminClick = () => {
-    navigate('/users');
-  };
+
 
   return (
     <Drawer
@@ -89,16 +83,7 @@ const Sidebar: React.FC = () => {
           </ListItemButton>
         ))}
         
-        {/* Tombol Admin hanya muncul untuk user dengan role Admin */}
-        {user?.role === 'Admin' && (
-          <ListItemButton
-            onClick={handleAdminClick}
-            selected={location.pathname === '/users'}
-          >
-            <ListItemIcon><AdminIcon /></ListItemIcon>
-            <ListItemText primary="Admin" />
-          </ListItemButton>
-        )}
+
       </List>
 
       <Divider />

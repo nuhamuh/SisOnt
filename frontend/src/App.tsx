@@ -6,10 +6,8 @@ import ProtectedRoute from './components/ProtectedRoute';
 import MainLayout from './components/Layout/MainLayout';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
-import Users from './pages/Users';
 import DataONT from './pages/DataONT';
 import HistoriPemantauan from './pages/HistoriPemantauan';
-import Grafik from './pages/Grafik';
 import './App.css';
 
 const theme = createTheme({
@@ -66,26 +64,6 @@ function App() {
                 <ProtectedRoute>
                   <MainLayout>
                     <HistoriPemantauan />
-                  </MainLayout>
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/grafik"
-              element={
-                <ProtectedRoute>
-                  <MainLayout>
-                    <Grafik />
-                  </MainLayout>
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/users"
-              element={
-                <ProtectedRoute>
-                  <MainLayout>
-                    <Users />
                   </MainLayout>
                 </ProtectedRoute>
               }

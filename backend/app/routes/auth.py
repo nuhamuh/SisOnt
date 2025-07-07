@@ -79,7 +79,6 @@ def login():
     token = jwt.encode({
         'user_id': user['id'],
         'username': user['username'],
-        'role': user['role'],
         'exp': datetime.utcnow() + timedelta(days=1)  # Token berlaku 1 hari
     }, os.getenv('JWT_SECRET_KEY', 'your-secret-key'))
 
@@ -87,8 +86,7 @@ def login():
         'token': token,
         'user': {
             'id': user['id'],
-            'username': user['username'],
-            'role': user['role']
+            'username': user['username']
         }
     })
 
@@ -100,7 +98,6 @@ def verify_token(current_user):
         'message': 'Token valid',
         'user': {
             'id': current_user['id'],
-            'username': current_user['username'],
-            'role': current_user['role']
+            'username': current_user['username']
         }
     }) 

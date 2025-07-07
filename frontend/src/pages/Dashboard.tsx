@@ -19,7 +19,7 @@ import {
   DialogContent,
   IconButton,
 } from '@mui/material';
-import { fetchONTList, fetchAllONTHistory, fetchData } from '../services/api';
+import { fetchONTList, fetchAllONTHistory } from '../services/api';
 import { Line } from 'react-chartjs-2';
 import {
   CategoryScale,
